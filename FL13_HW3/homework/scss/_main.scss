@@ -3,15 +3,13 @@ $font-source: 'Source Sans Pro', sans-serif;
 $font-hind: 'Hind', sans-serif;
 $font-fresca: 'Fresca', sans-serif;
 
-$main-font-color: #2c2f3c;
-$highlight-word-color: #14a0c7;
-
-$block-bg-color: #21232e;
-$block-secondary-color: #cbcbd3;
+$block-secondary-color: #c0c3ce;
+$block-side-padding: 230px;
+$block-border-radius: 9px;
 
 @mixin lead-btn() {
   padding: 18px 46px;
-  background-color: #699900;
+  background-color: map-get($page-colors, "lead-btn");
   border-radius: 0;
   border: 0;
   outline: 0;
@@ -20,8 +18,17 @@ $block-secondary-color: #cbcbd3;
   font-size: 1.25em;
 
   &:hover {
-    background-color: lighten(#699900, 3%);
+    background-color: lighten(map-get($page-colors, "lead-btn"), 3%);
     cursor: pointer;
+  }
+}
+
+@mixin page-link($color: white) {
+  font-size: 1.5rem;
+  color: $color;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -35,19 +42,17 @@ $block-secondary-color: #cbcbd3;
     height: $height;
     position: absolute;
     display: block;
-    background-color: $highlight-word-color;
+    background-color: map-get($page-colors, "highlight-word");
     z-index: -1;
   }
 }
-
-// TODO: link hover mixin
-// btn mixin
 
 html, body {
   margin: 0;
   font-size: 14px;
   font-family: $font-source;
-  color: $main-font-color;
+  color: map-get($page-colors, "main-font");
+  background-color: map-get($page-colors, "body-bg");
   padding: 0;
   height: 100%;
   box-sizing: border-box;
@@ -58,41 +63,41 @@ p {
   margin: 0;
 }
 
+.landing-logo {
+
+  img {
+    margin-right: 10px;
+    height: 64px;
+    width: 64px;
+    vertical-align: middle
+  }
+
+  p {
+    vertical-align: middle;
+    font-size: 2.25em;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 0.1em;
+
+    span {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: initial;
+    }
+  }
+
+}
+
 .header {
-  background: url(../img/m-h-day.jpg) no-repeat center center;
+  background: url($jump-top-bg-pic) no-repeat center center;
   background-size: cover;
   height: 975px;
   border-bottom-right-radius: 40% 35%;
 
   &-wrap {
-    padding: 15px 230px 0;
-  }
-
-  .landing-logo {
-
-    img {
-      margin-right: 10px;
-      height: 64px;
-      width: 64px;
-      vertical-align: middle
-    }
-
-    p {
-      vertical-align: middle;
-      font-size: 2.25em;
-      font-weight: bold;
-      display: inline-block;
-      letter-spacing: 0.1em;
-
-      span {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: normal;
-        text-align: center;
-        letter-spacing: initial;
-      }
-    }
-
+    padding: 15px $block-side-padding 0;
   }
 
   &_heading {
@@ -113,11 +118,11 @@ p {
 
   &_text {
     white-space: pre-line;
-    font-size: 1.35em;
-    line-height: 1.35em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     letter-spacing: .04em;
     word-spacing: .1em;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   &_button {
@@ -127,30 +132,27 @@ p {
   }
 
   .login {
-    color: white;
-    font-size: 1.5em;
     margin-left: 200px;
-
-    &:hover {
-      text-decoration: none;
-    }
+    @include page-link();
   }
 
 }
 
 .section {
+  text-align: center;
 
   &_text {
-    text-align: center;
+
     margin: 25px 0;
     font-size: 3.5rem;
     font-weight: 600;
+    display: inline-block;
 
     @include highlight-word(216px, 55px);
 
     &::before {
       bottom: 5px;
-      left: 963px;
+      right: 16px;
     }
   }
 }
@@ -160,23 +162,22 @@ p {
   .section_card {
     width: 60%;
     margin: 30px auto 0;
-    background-color: $block-bg-color;
+    background-color: map-get($page-colors, "block-bg");
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    border-radius: 9px;
+    border-radius: $block-border-radius;
 
     img {
       height: 300px;
-      border-radius: 9px;
+      border-radius: $block-border-radius;
     }
 
     &_right_container {
       padding: 0 80px;
       width: 60%;
       margin: 0 auto;
-      text-align: center;
     }
 
     &_heading {
@@ -186,8 +187,7 @@ p {
     }
 
     &_text {
-      color: $block-secondary-color;
-      font-size: 1.5rem;
+      @extend .section_banner_text;
       line-height: 2.25rem;
       text-align: left;
       margin-bottom: 15px;
@@ -195,27 +195,23 @@ p {
   }
 
   .section_link {
-    text-align: center;
-    color: $block-secondary-color;
-    font-size: 1.5rem;
-
-    &:hover {
-      text-decoration: none;
-    }
+    @include page-link($block-secondary-color);
   }
 }
 
 .section_banner {
   width: 66%;
   margin: 0 auto;
-  background: linear-gradient(90deg, #61911c, #2c5add);
+  background: linear-gradient(90deg, map-get($page-colors, "section-gradient-start"), map-get($page-colors, "section-gradient-end"));
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   height: 180px;
-  border-radius: 9px;
+  border-radius: $block-border-radius;
   padding: 25px 100px;
   box-sizing: border-box;
+  transform: translate(0, 140px);
+  text-align: left;
 
   &_heading {
     font-size: 3rem;
@@ -238,5 +234,28 @@ p {
   &_button{
     align-self: center;
     @include lead-btn;
+  }
+}
+
+.footer {
+  margin-top: 50px;
+  background-color: map-get($page-colors, "block-bg");
+  padding: 170px $block-side-padding 70px;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $block-secondary-color;
+  }
+
+  &_text {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 25%;
+  }
+
+  &-cr {
+    font-size: 1.5rem;
   }
 }
