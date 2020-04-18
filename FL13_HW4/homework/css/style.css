@@ -18,7 +18,7 @@ a {
 
 html,
 body {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     font-family: 'Source Serif Pro', serif;
     color: #777;
@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    max-width: 1150px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -64,7 +64,6 @@ body {
 }
 
 .header-inner {
-    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -117,7 +116,7 @@ body {
 }
 
 .hero-slogan {
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
     font-weight: 700;
     color: white;
@@ -131,7 +130,7 @@ body {
 }
 
 .post-section {
-    margin: 10rem 0;
+    margin: 8rem 0;
 }
 
 .post-banner {
@@ -177,8 +176,8 @@ body {
     margin-bottom: 3.5em;
 }
 
-hr.post-delimiter {
-    margin: 7em 0;
+.post-delimiter {
+    margin: 5.5em 0;
     border: 0;
     border-top: 1px solid #f0f0f0;
 }
@@ -211,9 +210,44 @@ hr.post-delimiter {
 }
 
 .footer-desc p {
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .footer-contact {
     flex: 1;
+}
+
+@media screen and (min-width: 900px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .header-inner {
+        max-width: 850px;
+    }
+
+    .footer-desc p {
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .hero-slogan {
+        font-size: 5em;
+    }
+
+    .container {
+        max-width: 1050px;
+    }
+
+    .header-inner {
+        max-width: 1200px;
+    }
+
 }
