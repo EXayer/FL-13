@@ -1,14 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>      
-  <title>Responsive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext" rel="stylesheet"
+          type="text/css">
+    <title>Responsive</title>
 </head>
 <body>
-  <!-- Your code goes here -->
+<!-- Your code goes here -->
+<header class="header">
+    <div class="header-inner container">
+        <h3 class="header-brand">Travel<span>Blog</span></h3>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Archive</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="main">
+            <section class="posts">
+                <article class="post-preview post-1">
+                    <div class="post-banner">
+                        <img src="img/post1.jpg" alt="Post 1 Banner">
+                    </div>
+
+                    <div class="post-info">
+                        <div class="post-header">
+                            <header>
+                                <h2 class="post-title">My amazing travel blog</h2>
+                            </header>
+                            <p class="post-teaser">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur
+                                culpa nisi
+                                asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus
+                                deleniti, alias sed voluptates dolores nesciunt.
+                            </p>
+                        </div>
+
+                        <time class="post-date" datetime="2019-03-07">07 <span>mar</span></time>
+                    </div>
+                </article>
+
+                <article class="post-preview post-2">
+                    <div class="post-banner">
+                        <img src="img/post2.jpg" alt="Post 2 Banner">
+                    </div>
+
+                    <div class="post-info">
+                        <div class="post-header">
+                            <header>
+                                <h2 class="post-title">Top 10 travel tips</h2>
+                            </header>
+                            <p class="post-teaser">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur
+                                culpa nisi
+                                asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus
+                                deleniti, alias sed voluptates dolores nesciunt.
+                            </p>
+                        </div>
+
+                        <time class="post-date" datetime="2019-03-06">06 <span>mar</span></time>
+                    </div>
+                </article>
+
+                <article class="post-preview post-3">
+                    <div class="post-banner">
+                        <img src="img/post3.jpg" alt="Post 3 Banner">
+                    </div>
+
+                    <div class="post-info">
+                        <div class="post-header">
+                            <header>
+                                <h2 class="post-title">Nice minimalist travel</h2>
+                            </header>
+                            <p class="post-teaser">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur
+                                culpa nisi
+                                asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus
+                                deleniti, alias sed voluptates dolores nesciunt.
+                            </p>
+                        </div>
+
+                        <time class="post-date" datetime="2019-03-04">04 <span>mar</span></time>
+                    </div>
+                </article>
+
+                <article class="post-preview post-4">
+                    <div class="post-banner">
+                        <img src="img/post4.jpg" alt="Post 4 Banner">
+                    </div>
+
+                    <div class="post-info">
+                        <div class="post-header">
+                            <header>
+                                <h2 class="post-title">With amazing regions</h2>
+                            </header>
+                            <p class="post-teaser">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur
+                                culpa nisi
+                                asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus
+                                deleniti, alias sed voluptates dolores nesciunt.
+                            </p>
+                        </div>
+
+                        <time class="post-date" datetime="2019-03-01">01 <span>mar</span></time>
+                    </div>
+                </article>
+
+                <article class="full-post">
+                    <div class="full-post-wrapper">
+                        <header>
+                            <h2 class="post-title">And again - it's totally amazing</h2>
+                        </header>
+                        <p class="post-teaser">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam, consequatur culpa
+                            nisi
+                            asperiores consequuntur explicabo nam, voluptatibus tempore non placeat tempora delectus
+                            deleniti, alias sed voluptates dolores nesciunt.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="news">
+                <article>
+                    <div class="news-banner">
+                        <img src="img/news1.jpg" alt="News 1 Banner">
+                    </div>
+
+                    <div class="news-info">
+                        <header class="news-header">
+                            <h2 class="news-title">Breaking news</h2>
+                        </header>
+                        <p class="news-teaser">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius explicabo perferendis
+                            maxime, ad enim, asperiores modi inventore eligendi dignissimos consequatur dolores placeat,
+                            nisi omnis quas. Non totam in impedit?
+                        </p>
+
+                        <p>
+                            <a href="#" class="news-open-link">Learn more...</a>
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="news-banner">
+                        <img src="img/news2.jpg" alt="News 2 Banner">
+                    </div>
+
+                    <div class="news-info">
+                        <header>
+                            <h2 class="news-title">Second news on the Travel blog</h2>
+                        </header>
+                        <p class="news-teaser">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius explicabo perferendis
+                            maxime, ad enim, asperiores modi inventore eligendi dignissimos consequatur dolores placeat,
+                            nisi omnis quas. Non totam in impedit?
+                        </p>
+
+                        <p>
+                            <a href="#" class="news-open-link">Learn more...</a>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-item">
+                <p>Copyright 2020, Epam systems</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+
+            <div class="footer-item">
+                <p>Design and coding <br>by name</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -230,7 +230,7 @@
 
     .contact-form .submit-btn:hover {
         background-color: lightseagreen;
-        border-color: lightseagreen;
+        border-color: transparent;
         color: white;
     }
 }
