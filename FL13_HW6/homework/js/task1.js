@@ -3,16 +3,9 @@
         AFTER_COMMA = 2;
 
     const check_number = Number.parseFloat(prompt('Check number'));
-
-    if (isNaN(check_number) || check_number < 0) {
-        alert('Invalid input data');
-
-        return false;
-    }
-
     const tip_percent = Number.parseFloat(prompt('Tip'));
 
-    if (isNaN(tip_percent) || tip_percent < 0 || tip_percent > MAX_PERCENT) {
+    if (isNaN(check_number) || check_number < 0 || isNaN(tip_percent) || tip_percent < 0 || tip_percent > MAX_PERCENT) {
         alert('Invalid input data');
 
         return false;
