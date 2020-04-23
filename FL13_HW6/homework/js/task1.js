@@ -1,4 +1,7 @@
 (function () {
+    const MAX_PERCENT = 100,
+        AFTER_COMMA = 2;
+
     const check_number = Number.parseFloat(prompt('Check number'));
 
     if (isNaN(check_number) || check_number < 0) {
@@ -9,13 +12,13 @@
 
     const tip_percent = Number.parseFloat(prompt('Tip'));
 
-    if (isNaN(tip_percent) || tip_percent < 0 || tip_percent > 100) {
+    if (isNaN(tip_percent) || tip_percent < 0 || tip_percent > MAX_PERCENT) {
         alert('Invalid input data');
 
         return false;
     }
 
-    const tip_amount = check_number * tip_percent / 100;
+    const tip_amount = check_number * tip_percent / MAX_PERCENT;
     const total = tip_amount + check_number;
 
     alert(
@@ -30,7 +33,7 @@ Total sum to pay: ${outputNumber(total)}`
             return number;
         }
 
-        return number.toFixed(2);
+        return number.toFixed(AFTER_COMMA);
     }
 
 }());
