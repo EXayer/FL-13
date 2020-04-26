@@ -5,7 +5,7 @@
 
     const word = prompt('Enter a word');
 
-    if (! word.trim().length) {
+    if (!word || !word.trim().length) {
         alert('Invalid value');
 
         return false;
