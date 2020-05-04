@@ -10,7 +10,6 @@
  */
 function storeNames(...names) {
     return names;
-
 }
 
 storeNames('John', 'Joe', 'Jack');
