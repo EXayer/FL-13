@@ -1,1 +1,43 @@
-/* TODO: your styles goes here*/
+#root {
+    margin: 50px auto 0;
+    padding: 5px;
+    width: 350px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+i {
+    vertical-align: bottom;
+}
+
+.nav-item {
+    margin-bottom: 2px;
+}
+
+.nav-item-content:hover {
+    cursor: pointer;
+    background-color: #cecac7;
+}
+
+.nav-item-children {
+    margin-left: 15px;
+}
+
+.folder-icon {
+    color: #f1bd6d;;
+}
+
+.file-icon {
+    color: #89868b;;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.folder-empty {
+    font-style: italic;
+}
