@@ -3,6 +3,7 @@
     padding: 5px;
     width: 350px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
 }
 
 i {
@@ -11,6 +12,10 @@ i {
 
 .nav-item {
     margin-bottom: 2px;
+}
+
+.nav-item-content.focused {
+    background-color: #cecac7;
 }
 
 .nav-item-content:hover {
@@ -40,4 +45,31 @@ i {
 
 .folder-empty {
     font-style: italic;
+}
+
+#context-menu {
+    position: absolute;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    background-color: #fcf8f5;
+    z-index: 100;
+}
+
+#context-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#context-menu ul.disabled li {
+    color: #c2bdc4;
+}
+
+#context-menu li {
+    padding: 2px;
+}
+
+#context-menu li:hover {
+    background-color: #cecac7;
+    cursor: pointer;
 }
