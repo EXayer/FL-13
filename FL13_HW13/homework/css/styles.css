@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Source Serif Pro', serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.btn--orange {
+    color: #fff;
+    background-color: #ff7f50;
+    border-color: #f08080;
+}
+
+.btn--orange:hover {
+    color: #fff;
+    background-color: #ee774b;
+    border-color: #e47777;
+}
+
+.text--large {
+  font-size: 2em;
+}
+
+.text--x15 {
+    font-size: 1.5em;
+}
+
+.text--height-normal {
+    line-height: 1.5em;
+}
