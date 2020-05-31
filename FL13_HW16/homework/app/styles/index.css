@@ -1,1 +1,16 @@
-/* Your code goes here */
+#app-container {
+    width: 600px;
+    margin: 200px auto;
+    background-color: #e0f3ff;
+    border-right: 5px;
+    padding: 25px;
+}
+
+form {
+    display: inline-block;
+}
+
+.user-id {
+    display: inline-block;
+    width: 70px;
+}
